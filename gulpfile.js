@@ -27,13 +27,13 @@ gulp.task('css', function() {
 gulp.task('sass', function() {
 	return gulp.src('src/sass/*.scss')
 		.pipe(plumber({ errorHandler: onError }))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: true
-		}))
 		.pipe(sass({
 			style: 'expanded',
 			errLogToConsole: true
+		}))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: true
 		}))
 		.pipe(gulp.dest('public/stylesheets'))
 		.pipe(server.notify());
