@@ -1,2 +1,2 @@
-/* Must run before pusing to heroku */
+/* Must run before pushing to heroku */
 heroku config:set NODE_ENV=production
